@@ -1,1 +1,1 @@
-# cs50-Exceptions
+# cs50
