@@ -15,25 +15,32 @@ def value_error():
 def value_error_new_solution():
     while True:
         try:
-            x = int(input("What's the value for x? "))
+            # x = int(input("What's the value for x? "))
+            return int(input("What's the value for x? "))
         #   break here will also work
         except ValueError:
-            print("x is not an integer")
-        else:
-            break
+            # print("x is not an integer")
+            pass # to re-prompt the user again and again
+        # else:
+            # break
+            # return x  # return is stronger than break, as it will not only break from the code but also return the value
     # print(f"x is {x}")
-    return x
+    # return x
 
 
 def main():
-    x = int(input("Enter your choice 1 or 2: "))
-    if x == 1:
-        value_error()
-    elif x == 2:
-        num = value_error_new_solution()
-        print(f"x is {num}")
-    else:
-        print("Invalid choice!")
+    while True:
+        x = int(input("Enter your choice 1 or 2: "))
+        if x == 1:
+            value_error()
+            break
+        elif x == 2:
+            # value_error_new_solution()
+            num = value_error_new_solution()
+            print(f"x is {num}")
+            break
+        else:
+            print("Invalid choice!")
 
 
 if __name__ == "__main__":
