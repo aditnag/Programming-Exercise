@@ -16,11 +16,13 @@ def value_error_new_solution():
     while True:
         try:
             x = int(input("What's the value for x? "))
+        #   break here will also work
         except ValueError:
             print("x is not an integer")
         else:
             break
-    print(f"x is {x}")
+    # print(f"x is {x}")
+    return x
 
 
 def main():
@@ -28,7 +30,8 @@ def main():
     if x == 1:
         value_error()
     elif x == 2:
-        value_error_new_solution()
+        num = value_error_new_solution()
+        print(f"x is {num}")
     else:
         print("Invalid choice!")
 
