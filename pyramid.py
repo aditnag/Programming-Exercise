@@ -1,13 +1,13 @@
 class Pyramid:
-    def findPattern(self, n):
-        for i in range(1, n, 1):
-            for j in range(n-1, 0, -1):
-                print("#", end="")
-            for k in range(0, i, 1):
-                print("* ")
-            # print("\r")
+    def pattern(self, n):
+        for i in range(1, n+1):
+            for k in range(n, i, -1):
+                print(" ", end="")
+            for j in range(i):
+                print("* ", end="")
+            print()
 
 
-n = int(input())
-py = Pyramid()
-py.findPattern(n)
+i = int(input())
+p = Pyramid()
+p.pattern(i)
