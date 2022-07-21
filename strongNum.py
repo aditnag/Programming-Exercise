@@ -8,7 +8,7 @@ class Strong:
     def main(self, m):
         n = m
         if n == 0:
-            print("0")
+            return False
         d = 0
         sum = 0
         while n != 0:
@@ -17,11 +17,11 @@ class Strong:
             sum += f
             n = n // 10
         if sum == m:
-            print("yes")
+            return True
         else:
-            print("No")
+            return False
 
 
 n = int(input())
 f = Strong()
-f.main(n)
+print(f.main(n))
